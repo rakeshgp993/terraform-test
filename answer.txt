@@ -34,3 +34,6 @@ Q. was it a priority to make your code well structured, extensible and reusable?
 	
 Q. what sacrifies did you make  due to time.?
 --> create entire code in maim.tf
+
+Q. code in Github
+--> https://github.com/rakeshgp993/terraform-test
