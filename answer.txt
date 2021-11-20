@@ -1,0 +1,36 @@
+Q. A short description of your solution, describing your choice and wy did you make the?
+--> Elastic Stack is a popular tool for storing and viewing logs of VMs and pods. Though AWS offers its own ElasticSearch as a managed service, there are many advantages of deploying the stack on ECs instead such as comparatively low costs and greater control on all the settings.
+
+deployed Elastic Stack comprises of below componenets on EC2:
+Elastic search with 3 nodes which is datasore and searchengine and where data is stored.
+Logstash filter the logs before letting them pass to the next step.
+Kibana which helps in visualizing the data and navigate the logs.
+
+Q. Resources, if any consulted
+--> NO
+
+Q. How long you spend on the exercise?
+--> 5Hrs
+
+Q. What did you choode to automate and why?
+--> the entire setup was deployed through terraform, as it is simplest way to depoly IAAC with less amount of coding.
+
+Q. How did you choose to secure ElasticSearch?
+--> we can use SSl and TLS with the self singed certificates to secure the data at transit.
+
+Q. How would you monitor the instance?
+--> we can monitor the EC2 instance using cloudwatch or prometheus, we will use CPU , Memory and I/O metrics for monitoring
+
+Q. could you extend your solution to laucnh  a secure cluster of ES?
+--> yes, in the TF code you can increase the number of node for cluster
+
+Q. could you extend your solution to replace a running instance with no downtime.
+--> we can you ASG, to scale up and down the ES node without impacting the ES cluster
+
+Q. was it a priority to make your code well structured, extensible and reusable?
+--> yes, we can pass the access key and secret access key instead of hardcoding.
+    we can use module to reuse the code in multiple ENV.
+	we can use multiple tf files for each fuctionality and call it in main, for well stucture and less code in main.
+	
+Q. what sacrifies did you make  due to time.?
+--> create entire code in maim.tf
